@@ -1,0 +1,30 @@
+{% load static %}
+
+
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
+  <link rel="stylesheet" href="{% static "css/_1_chameleonic-header.css" %}">
+  <link rel="stylesheet" href="{% static "css/contact.css" %}">
+
+
+<section class="position-relative  js-cha-section" id="about">
+    <div class="cha-header-clip js-cha-header-clip" data-theme="default">
+        <header class="cha-header js-cha-header">
+        <div class="container max-width-xl height-100%">
+            <div class="flex justify-between items-center height-100%">
+            <div class="padding-y-3xs justify-start border-top gap-xs">
+                <h4 class="text-lg color-white">FLORENT CLENET</h4>
+                <h4 class="text-md color-white">DEVELOPPEUR FREELANCE</h4>
+            </div>
+            <nav class="cha-header__nav js-cha-header__nav">
+                <ul class="flex items-center gap-xs">
+                <li><a href="{% url 'index' %}" class="btn btn--subtle">Accueil</a></li>
+                <li><a href="#skills" class="btn btn--subtle">Expertise</a></li>
+                <li><a href="#exp" class="btn btn--subtle">Expériences</a></li>
+                <li><a href="#contact" class="btn btn--subtle">Contact</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+        </header>
+    </div>
+</section>

@@ -1,0 +1,128 @@
+/* -------------------------------- 
+
+File#: _1_chameleonic-header
+Title: Chameleonic Header
+Descr: Header component whose theme adapts on scroll to the underneath section
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --cha-header-height: 70px;
+}
+@media (min-width: 64rem) {
+  :root {
+    --cha-header-height: 70px;
+  }
+}
+
+.cha-header-clip {
+  position: absolute;
+  z-index: var(--z-index-header);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  pointer-events: none;
+}
+
+.cha-header {
+  height: var(--cha-header-height);
+  background-color: hsla(var(--color-contrast-high-h), var(--color-contrast-high-s), var(--color-contrast-high-l), 0.90);
+  pointer-events: auto;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.cha-header__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.cha-header__nav {
+  display: none;
+}
+
+.cha-header__link {
+  color: var(--color-contrast-higher);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: opacity 0.3s;
+}
+.cha-header__link:hover {
+  opacity: 0.5;
+}
+
+.cha-header__btn {
+  background-color: var(--color-primary);
+  padding: var(--space-2xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  transition: transform 0.2s, background-color 0.2s;
+}
+.cha-header__btn:hover {
+  background-color: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) * 0.9));
+}
+.cha-header__btn:active {
+  transform: translateY(2px);
+}
+.cha-header__btn:focus {
+  outline: 2px solid hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+  outline-offset: 2px;
+}
+
+.cha-header__trigger,
+.cha-modal__close {
+  display: block;
+}
+.cha-header__trigger .icon,
+.cha-modal__close .icon {
+  --size: 24px;
+  display: block;
+}
+
+.cha-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-bg);
+  display: none;
+  z-index: var(--z-index-fixed-element);
+}
+
+.cha-modal__header {
+  height: var(--cha-header-height);
+  background-color: var(--color-bg);
+  box-shadow: 0 3px 5px var(--color-bg);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.cha-modal__link {
+  font-size: var(--text-lg);
+  text-decoration: none;
+  color: var(--color-contrast-higher);
+  padding: var(--space-3xs) 0;
+}
+
+@media (min-width: 64rem) {
+  .cha-header__nav {
+    display: block;
+  }
+  .cha-header__trigger, .cha-modal {
+    display: none !important;
+  }
+}

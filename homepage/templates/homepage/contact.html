@@ -1,0 +1,74 @@
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+<link rel="stylesheet" href="{% static "css/contact.css" %}">
+
+<!-- CONTACT -->
+
+<div class="container max-width-adaptive-lg">
+  <div class="grid gap-xl">
+    <div class="col-6@md">
+      <div class="text-component padding-top-2xs">
+        <form method="post">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+
+          <section class="contact_column"  id="skills" >
+              <div class="text-component text-center margin-bottom-sm">
+                <h4>Contactez moi!</h1>
+              </div>
+              
+              <div class="margin-bottom-sm fieldWrapper" >
+                  {{ form.subject.errors }}
+                  <label class="form-label margin-bottom-3xs" for="input-name">Nom</label>
+                  {{ form.name }}
+              </div>
+
+              <div class="margin-bottom-sm">
+                  {{ form.subject.errors }}
+                  <label class="form-label margin-bottom-3xs" for="input-company">Entreprise et poste occupé</label>
+                  {{ form.company }}
+              </div>
+              
+              <div class="margin-bottom-sm">
+                  {{ form.subject.errors }}
+                  <label class="form-label margin-bottom-3xs" for="input-email">Object</label>
+                  {{ form.object }}
+              </div>
+              
+              <div class="margin-bottom-sm">
+                  {{ form.subject.errors }}
+                  <label class="form-label margin-bottom-3xs" for="input-email">Email</label>
+                  {{ form.email }}
+              </div>
+              
+              <div class="margin-bottom-sm">
+                  {{ form.subject.errors }}
+                  <label class="form-label margin-bottom-3xs" for="input-email">Message</label>
+                  {{ form.message }}
+              </div>
+              <div class="margin-bottom-sm">
+                  <button class="btn btn--subtle btn--contrast"type="submit">Envoyer!</button>
+              </div>
+          
+          </section>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-6@md">
+
+      <div class="text-component padding-top-3xl">
+        <h4>A propos du site:</h4>
+        <p class="color-contrast-high line-height-lg">J'ai développé ce site dans le but de créer une vitrine mais aussi de me former sur les apps web.</p>
+        <p class="color-contrast-high line-height-lg">Le site a été développé en utilisant Django, Gunicorn et Nginx sur serveur Linux </p>
+        <p class="color-contrast-high line-height-lg">Le code du site est entièrement disponible sur <a href="https://github.com/florent-clenet" target="_blank" class="link">Github</a> </p>
+        <p class="color-contrast-high line-height-lg">Et si on travaillait ensemble? Vous pouvez utiliser le formulaire de contact ci-contre ou directement par téléphone ou mail.</p>
+        <p class="color-contrast-high font-semibold line-height-lg">Tel: +33 6 59 01 36 47</p>
+        <p class="color-contrast-high font-semibold line-height-lg">Email: florent.clenet@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'homepage/back_right.html' %}

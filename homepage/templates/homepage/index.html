@@ -1,0 +1,172 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/style_addon.css" %}">
+    <link rel="stylesheet" href="{% static "css/_1_main-footer.css" %}">
+    <link rel="stylesheet" href="{% static "css/_1_chameleonic-header.css" %}">
+    <link rel="stylesheet" href="{% static "css/_1_previous-next-links.css" %}">
+    <link rel="stylesheet" href="{% static "css/_1_diagonal-section.css" %}">
+    <title>CLENET Florent Resume</title>
+    <link rel="icon" type="image/x-icon" href="{% static "img/favicon.png" %}">
+  </head>
+  <body >
+    <!-- Header -->
+    {% include 'homepage/header.html' %}
+    <main" >
+      <section class="bg position-relative padding-top-2xl padding-y-xl js-cha-section" id="homepage">
+          <!--ABOUT-->
+        <div class="container max-width-adaptive-lg">
+          <div class="text-component text-component--relaxed">
+            <p class="text-2xl font-semibold color-contrast-high">Bienvenue !</p>
+            <p class="text-md font-semibold">Je m'appelle Florent CLENET, anciennement développeur en systèmes embarqués, je suis aujourd'hui ingénieur en développement software freelance, polyvalent et autonome!</p>
+            <p class="text-md font-semibold">J'occupe mon temps libre entre ma passion pour l'histoire, la rénovation d'un batie ancien et du gaming.</p>
+            <p class="text-md font-semibold">Fort de mes années d'expériences dans l'industrie, j'espère pouvoir mettre mes compétences à votre service, n'hésitez pas à me contacter!</p>
+            <a href="{% static 'pdf/Resume.pdf' %}" target="_blank" class="btn btn--accent gap-3xs">
+              <svg class="icon icon--xs" viewBox="0 0 16 16" aria-hidden="true">
+                  <g fill="currentColor">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v10"></path>
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7l4 4 4-4"></path>
+                  <path fill="none" opacity=".4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15H1"></path>
+                  </g>
+              </svg>
+              <span>Mon CV (pdf)</span>
+            </a>
+          </div>
+        </div>
+          <!-- {% include 'homepage/back_left.html' %} -->
+      </section>
+      
+      <section class="bg position-relative padding-y-xl js-cha-section" data-theme="dark" id="skills">
+        <!-- SKILLS -->
+        <section class="position-relative z-index-1 padding-y-xs">
+          <div class="container max-width-adaptive-lg">
+            <div class="text-component padding-y-lg text-component--relaxed">
+              <p class="text-3xl font-semibold">Mon expertise</p>
+            </div>
+            <ul class="grid gap-lg">
+              <li class="col-6@md">
+                <div class="flex gap-sm items-center">
+                  <figure class="flex-shrink-0 inline-flex flex-center width-lg height-lg radius-50% inner-glow shadow-ring bg-light">
+                    <svg class="icon icon--sm color-primary" viewBox="0 0 24 24" aria-hidden="true">
+                      <g fill="currentColor">
+                        <path d="M21 10H3c-1.103 0-2-.897-2-2V5c0-1.103.897-2 2-2h18c1.103 0 2 .897 2 2v3c0 1.103-.897 2-2 2z"></path>
+                        <rect x="1" y="12" width="6" height="9" rx="2" ry="2" opacity=".4"></rect>
+                        <rect x="9" y="12" width="14" height="9" rx="2" ry="2" opacity=".4"></rect>
+                      </g>
+                    </svg>
+                  </figure>
+            
+                  <h4>Langages</h4>
+                </div>
+        
+                <div class=" gap-sm">
+                  <div class="width-lg" aria-hidden="true"></div>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">Expert :   python  &#128151  /  C </p>
+                  <p class="padding-x-lg color-contrast-high font-semibold  line-height-lg">intermédiaire :   C++ /   bash </p>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">Débutant :   HTML /   CSS /  Javascript</p>
+                </div>
+              </li>
+        
+              <li class="col-6@md">
+                <div class="flex gap-sm items-center">
+                  <figure class="flex-shrink-0 inline-flex flex-center width-lg height-lg radius-50% inner-glow shadow-ring bg-light">
+                    <svg class="icon icon--sm color-primary" viewBox="0 0 24 24" aria-hidden="true">
+                      <g fill="currentColor">
+                        <path d="M9 9H4c-1.103 0-2-.897-2-2V4c0-1.103.897-2 2-2h5c1.103 0 2 .897 2 2v3c0 1.103-.897 2-2 2z"></path>
+                        <rect x="2" y="11" width="9" height="11" rx="2" ry="2" opacity=".4"></rect>
+                        <path d="M20 22h-5c-1.103 0-2-.897-2-2v-3c0-1.103.897-2 2-2h5c1.103 0 2 .897 2 2v3c0 1.103-.897 2-2 2z"></path>
+                        <rect x="13" y="2" width="9" height="11" rx="2" ry="2" transform="rotate(180 17.5 7.5)" opacity=".4"></rect>
+                      </g>
+                    </svg>
+                  </figure>
+            
+                  <h4>Outils</h4>
+                </div>
+        
+                <div class=" gap-sm">
+                  <div class=" width-lg" aria-hidden="true"></div>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">Expert : Git  &#128151 / Github / Gitlab  &#128151</p>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">intermédiaire :  SVN /  SQL</p>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">Débutant : Jenkins / Gunicorn /  Nginx</p>
+                </div>
+              </li>
+        
+              <li class="col-6@md">
+                <div class="flex gap-sm items-center">
+                  <figure class="flex-shrink-0 inline-flex flex-center width-lg height-lg radius-50% inner-glow shadow-ring bg-light">
+                    <svg class="icon icon--sm color-primary" viewBox="0 0 24 24" aria-hidden="true">
+                      <g fill="currentColor">
+                        <circle cx="19" cy="9" r="5"></circle>
+                        <path d="M1 3.059A23.925 23.925 0 0 1 8 20c0-3.416 1.557-6.468 4-8.486" fill="none" opacity=".4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                      </g>
+                    </svg>
+                  </figure>
+            
+                  <h4>Framework</h4>
+                </div>
+        
+                <div class="gap-sm">
+                  <div class="width-lg" aria-hidden="true"></div>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">Expert : pytest</p>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">intermédiaire : Beeware  &#128151</p>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">Débutant : Django</p>
+                </div>
+              </li>
+        
+              <li class="col-6@md">
+                <div class="flex gap-sm items-center">
+                  <figure class="flex-shrink-0 inline-flex flex-center width-lg height-lg radius-50% inner-glow shadow-ring bg-light">
+                    <svg class="icon icon--sm color-primary" viewBox="0 0 24 24" aria-hidden="true">
+                      <g fill="currentColor">
+                        <path d="M17.5 11h-11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2h11C19.981 2 22 4.019 22 6.5S19.981 11 17.5 11z" opacity=".4"></path>
+                        <circle cx="6.5" cy="6.5" r="4.5"></circle>
+                        <path d="M6.5 13h11c2.481 0 4.5 2.019 4.5 4.5S19.981 22 17.5 22h-11C4.019 22 2 19.981 2 17.5S4.019 13 6.5 13z" opacity=".4"></path>
+                        <circle cx="17.5" cy="17.5" r="4.5"></circle>
+                      </g>
+                    </svg>
+                  </figure>
+                  <h4>OS</h4>
+                </div>
+        
+                <div class=" gap-sm">
+                  <div class="width-lg" aria-hidden="true"></div>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">Linux &#128151</p>
+                  <p class="padding-x-lg color-contrast-high font-semibold line-height-lg">Windows</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        {% include 'homepage/back_right.html' %}
+      </section>
+      
+      <!-- exp -->
+      <section class="bg position-relative padding-y-xl js-cha-section"  id="exp">
+        <section class="position-relative z-index-1 padding-y-xs">
+          <div class="container max-width-adaptive-lg">
+            <div class="text-component padding-y-lg text-component--relaxed">
+              <p class="text-3xl font-semibold">Mes expériences</p>
+            </div>
+          {% include 'homepage/timeline.html' %}
+          </div>
+        </section>
+        {% include 'homepage/back_left.html' %}
+      </section>
+    
+        
+      <section class="position-relative padding-y-xl bg js-cha-section" data-theme="dark" id="contact">
+        <!-- Contact Form -->
+        {% include 'homepage/contact.html' %}
+      </section>
+    </main>
+    <!-- Site footer -->  
+    {% include 'homepage/footer.html' %}
+  </body>
+  <script src="{% static "js/_1_chameleonic-header.js" %}"></script>
+
+</html>
